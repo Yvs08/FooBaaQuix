@@ -1,5 +1,6 @@
 package com.foo.demo.service;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -28,7 +29,9 @@ public class TransformService {
     }
 
     public String transformBatchProcessing(int number) {
-
+        if (number < 0 || number > 100) {
+            return "le nombre doit etre compris entre 0 et 100";
+        }
         return Integer.toString(number).concat("  ").concat(getTransformNumber(number));
     }
 
