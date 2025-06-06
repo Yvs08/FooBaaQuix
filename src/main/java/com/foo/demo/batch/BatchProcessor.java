@@ -44,7 +44,9 @@ import java.nio.file.Paths;
                         .map(transformService::transformBatchProcessing) // mapping des donnnes du fichier avec le service de transformation
                         .forEach(result -> {
                             try {
-                                writer.write(result); // Ecriture du resultat sur le fichier de sortie
+                                System.out.println("fin du ");
+                                writer.write( result); // Ecriture du resultat sur le fichier de sortie
+                                System.out.println(result);
                                 writer.newLine();
                             } catch (IOException e) {
                                 throw new UncheckedIOException(e);

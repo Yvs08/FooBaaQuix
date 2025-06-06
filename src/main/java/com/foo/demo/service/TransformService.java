@@ -28,7 +28,13 @@ public class TransformService {
     }
 
     public String transformBatchProcessing(int number) {
-        return getTransformNumber(number);
+
+        StringBuilder transform = new StringBuilder();
+
+        //Integer.toString(number);
+        //return getTransformNumber(number);
+
+        return Integer.toString(number).concat("  ").concat(getTransformNumber(number));
     }
 
 
